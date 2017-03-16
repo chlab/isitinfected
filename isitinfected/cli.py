@@ -1,17 +1,17 @@
 """
-isitinfected?
+isitinfected
 
 Usage:
   isitinfected collect_images
-  skele -h | --help
-  skele --version
+  isitinfected -h | --help
+  isitinfected --version
 
 Options:
   -h --help                         Show this screen.
   --version                         Show version.
 
 Examples:
-  skele collect_images
+  isitinfected collect_images
 
 Help:
   For help using this tool, please open an issue on the Github repository:
@@ -33,10 +33,10 @@ def main():
     print options
     # Here we'll try to dynamically match the command the user is trying to run
     # with a pre-defined command class we've already created.
-    for k, v in options.iteritems():
-        if hasattr(commands, k):
-            module = getattr(commands, k)
-            commands = getmembers(module, isclass)
-            command = [command[1] for command in commands if command[0] != 'Base'][0]
+    for (k, v) in options.items(): 
+        if hasattr(isitinfected.commands, k) and v:
+            module = getattr(isitinfected.commands, k)
+            isitinfected.commands = getmembers(module, isclass)
+            command = [command[1] for command in isitinfected.commands if command[0] != 'Base'][0]
             command = command(options)
             command.run()

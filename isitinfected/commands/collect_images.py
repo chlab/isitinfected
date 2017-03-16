@@ -1,6 +1,7 @@
 """The collect-images command"""
 
 from .base import Base
+from json import dumps
 
 
 class Collect_Images(Base):
