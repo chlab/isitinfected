@@ -1,11 +1,10 @@
 # Is it infected?
 
-*Using machine learning and convolutional neural networks to detect if your beer is infected*
+This repo reflects my efforts of building a reddit bot that will detect pictures of infected homebrew using deep learning.
 
-## Setup
+Current status:
 
-* Clone this repo
-* Run `pip install -e .` in the project folder
+* write a script that scrapes the [r/Homebrewing](http://reddit.com/r/Homebrewing) subreddit for pictures of infected homebrew
 
 ## License
 
