@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 requests = "*"
+tensorflow = "*"
+tensorflow-hub = "*"
 
 [dev-packages]
 ipython = "*"
